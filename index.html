@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/20f0c0c306.js" crossorigin="anonymous"></script>
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <div id="header">
+        <div class="box">
+            <nav>
+                <!-- <img src="images/logo.jpg" class="logo" alt=""> -->
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="https://drive.google.com/drive/folders/1C-ksNmIbBPTI5a30K3enB2bDXmf6eQg9?usp=sharing" target="_blank">CV/Resume</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+
+            <div class="header-text">
+                <p> <span>W</span>elcome!</p>
+                <h1>I am Ishant Rohilla<br>Student at IITG</h1>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="about">
+        <div class="box">
+            <div class="row1">
+                <div class="about-col-1">
+                    <img src="./images/about1.jpg" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>I am currently in my 4th year of B.Tech in Biosciences and Bioengineering Department from IIT Guwahati, My interests include Problem Solving and Web Applications development, I am also gaining experience in Machine Learing and would think of research in this field in the near future.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <!-- <li><span> App Techonologies</span><br>Flutter, Firebase, Android Studio*</li> -->
+                            <li><span> Programming </span><br>C++,C, Python, JavaScript*</li>
+                            <li><span> Web Technologies</span><br>HTML, CSS, React.js*, Node.js*, Express.js*</li>
+                            <li><span> Machine Learning </span><br>NumPy, Pandas, Matplotlib*, Scikit-Learn*</li>
+                            <li><span> Database Management </span><br>SQL, PostgreSQL, MongoDB*</li>
+                            <li><span> Miscellaneous </span><br>Git, GitHub, VS Code, LaTeX*, MATLAB*</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>May 2024 - July 2024</span><br>Full Stack Developer Internship at Student Web Committee, IITG</li></li>
+                            <li>- Developed, maintained, and optimized the Election Portal and HAB Portal using React.js, Node.js, and SQL/MongoDB, improving system performance, fixing bugs, and ensuring seamless user interactions.</li>
+                            <li>- Led a team of 3 juniors, mentoring them in React.js and Node.js, assigning tasks, conducting code reviews, and guiding them in building scalable features for the Sports Board Portal.</li>
+                            <li>- Implemented secure authentication and optimized database queries for the HMC Election Portal, reducing load times and enhancing overall efficiency using Node.js, MongoDB, and SQL.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2021-2025</span><br>IIT Guwahati - B.Tech Biosciences and Bioengineering</li>
+                            <li><span>2020-2021</span><br>Senior Secondary CBSE (85%)</li>
+                            <li><span>2019-2020</span><br>Secondary CBSE (91.6%)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="services" id="projects">
+        <div class="box">
+            <div class="row">
+                <div class="col-md-12 ">
+                    <h2 class="display-4 font-weight-bold"><span>M</span>y Projects</h2>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-box">
+                        <i class="fa fa-anchor" style="font-size:40px"></i>
+                        <h3>ncRNA Gene Detection</h3>
+                        <p>Implemented a ML framework combining Gaussian Mixture Models and Random Forest Classifiers to identify ncRNA regions and classify sRNA families in C. elegans.</p>
+                        <a href="https://drive.google.com/drive/folders/1D0ejeN4hq-IAfi31Q0EpqKv_PL_xZSJg">LEARN MORE</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-box">
+                        <i class="fa fa-bar-chart" style="font-size:40px"></i>
+                        <h3>Chatting Application</h3>
+                        <p>A MERN Stack web-app to chat with others in one-to-one and in group using Socket.io to establish communication and mongoDB to store user and chat data.</p>
+                        <a href="https://github.com/Ishant2004/real-time-chat-app">LEARN MORE</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-box">
+                        <i class="fa fa-diamond" style="font-size:40px"></i>
+                        <h3>CampusWay</h3>
+                        <p>Developed IITG campus navigation system using Flask-hosted Python API to visualize the shortest path using Dijkstra's Algorithm between intersections.</p>
+                        <a href="https://github.com/Ishant2004/campusWay">LEARN MORE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contact" id="contact">
+        <div class="box">
+            <div class="row">
+                <div class="col-md-12 ">
+                    <h2 class="display-4 font-weight-bold"><span>C</span>ontact Me</h2>
+                </div>
+                <div class="col-md-4">
+                    <div class="contact-box">
+                        <i class="fa-brands fa-instagram" style="color: #ffffff; font-size: 40px;"></i>
+                        <p><a href="https://www.instagram.com/_ishant_rohilla/"><span>Connect</span></a> with me on Instagram</p>
+                        
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contact-box">
+                        <i class="fa-brands fa-linkedin" style="color: #ffffff; font-size: 40px;"></i>
+                        
+                        <p><a href="https://www.linkedin.com/in/ishant-rohilla-806291247/"><span>Connect </span></a>with me on LinkedIn</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contact-box">
+                        <i class="fa-brands fa-github" style="color: #ffffff; font-size: 40px;"></i>
+                        
+                        <p><a href="https://github.com/Ishant2004"><span>Follow</span></a> me on Github</p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+         var tablinks=document.getElementsByClassName("tab-links");
+         var tabcontents=document.getElementsByClassName("tab-contents");
+
+         function opentab(tabname)
+         {
+            for(tablink of tablinks)
+            {
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents)
+            {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+         }
+    </script>
+</body>
+
+</html>
