@@ -1,0 +1,37 @@
+name: Deploy Portfolio to EC2
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up SSH key
+        uses: webfactory/ssh-agent@v0.7.0
+        with:
+          ssh-private-key: ${{ secrets.EC2_SSH_KEY }}
+
+      - name: Copy project to EC2 and build/run container
+        run: |
+          ssh -o StrictHostKeyChecking=no ubuntu@${{ secrets.EC2_HOST }} <<'EOF'
+            cd ~
+            rm -rf portfolio-temp
+            mkdir portfolio-temp
+            exit
+          EOF
+
+          scp -o StrictHostKeyChecking=no -r ./* ubuntu@${{ secrets.EC2_HOST }}:~/portfolio-temp/
+
+          ssh -o StrictHostKeyChecking=no ubuntu@${{ secrets.EC2_HOST }} <<'EOF'
+            cd ~/portfolio-temp
+            sudo docker stop my-portfolio-container || true
+            sudo docker rm my-portfolio-container || true
+            sudo docker build -t my-portfolio .
+            sudo docker run -d --name my-portfolio-container -p 80:80 my-portfolio
+            exit
+          EOF
