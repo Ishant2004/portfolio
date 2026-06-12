@@ -28,7 +28,7 @@
 
             <div class="header-text">
                 <p> <span>W</span>elcome!</p>
-                <h1>I am Ishant <br>Student at IIT Guwahati</h1>
+                <h1>I am Ishant <br>Software Developer</h1>
             </div>
         </div>
     </div>
@@ -42,7 +42,7 @@
                 </div>
                 <div class="about-col-2">
                     <h1 class="subtitle">About Me</h1>
-                    <p>I’m a B.Tech student at IIT Guwahati, with a strong interest in software development and problem-solving. I enjoy building clean, efficient solutions, whether it’s a full-stack web application, data visualization tool, or backend system. With a solid foundation in programming, data structures, and system design, I’ve worked on many projects and I value writing maintainable code, learning new technologies, and collaborating in team environments. Currently, I’m exploring opportunities to grow as a developer, contribute to real-world products, and apply my skills in impactful ways.</p>
+                    <p>I'm a B.Tech student at IIT Guwahati, with a strong interest in software development and distributed systems. I enjoy building clean, reliable backend solutions, from event-driven pipelines and workflow automation APIs to large-scale scraping infrastructure. With a solid foundation in programming, data structures, and system design, I've gained hands-on production experience as a Backend Engineering Intern and Software Development Engineer-I at Pibit.AI, building Python microservices on AWS (Lambda, SQS, MongoDB) and shipping features used by enterprise clients. I value writing maintainable code, designing observable systems, and contributing to real-world products that operate at scale.</p>
 
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
@@ -53,21 +53,46 @@
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
                             <!-- <li><span> App Techonologies</span><br>Flutter, Firebase, Android Studio*</li> -->
-                            <li><span> Programming languages </span><br>C++, C, Python, JavaScript</li>
-                            <li><span> Frontend Technologies </span><br>React.js, Next.js*, HTML, CSS, TailwindCSS, TypeScript</li>
-                            <li><span> Backend Technologies </span><br>Node.js, Express.js, RESTful APIs</li>
-                            <li><span> Databases </span><br>MongoDB, PostgreSQL, Supabase, SQL</li>
-                            <li><span> Tools & Platforms </span><br>Github, Cursor, Clerk, Vapi.ai, LLMs, Sentry, Agile, API Integration</li>
-                            <li><span> Cloud & Devops </span><br>Git, CI/CD, Vercel Deployment</li>
+                            <li><span style="font-size: 16px;"> Programming languages </span>: C++, Python, JavaScript</li>
+                            <li><span style="font-size: 16px;"> Frontend Technologies </span>: React.js, Next.js*, HTML, CSS, TailwindCSS, TypeScript</li>
+                            <li><span style="font-size: 16px;"> Backend Technologies </span>: Node.js, Express.js, RESTful APIs, FastAPI,  JWT Authentication</li>
+                            <li><span style="font-size: 16px;"> Databases </span>: MongoDB, PostgreSQL, SQL</li>
+                            <li><span style="font-size: 16px;"> Cloud & Devops </span>: AWS (S3, ECS Fargate), Docker, Github Actions, Vercel</li>
+                            <li><span style="font-size: 16px;"> Tools & Platforms </span>: Git, Github, Postman, Cursor, Sentry, Clerk</li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="experience">
-                        <ul>
-                            <li><span>May 2024 - July 2024</span><br>Full Stack Developer Internship at Student Web Committee, IITG</li></li>
-                            <li>- Developed, maintained, and enhanced Institute web portals (Election and HAB Portal), fixing 15+ bugs and boosting page load speed by 30% to guarantee a seamless and effective user experience.</li>
-                            <li>- Managed a team of 4, delegating tasks, code review, and clean, modular coding, leading to 40% faster feature rollouts.</li>
-                            <li>- Optimized backend logic and database queries with the SWC team, improving data transfer and reducing response time by 25% across key institute portals.</li>
-                        </ul>
+                        <div class="inner-tabs">
+                            <div class="inner-tab-titles">
+                                <p class="inner-tab-links active-inner" onclick="opentabInner(event,'exp-sde')">SDE-I</p>
+                                <p class="inner-tab-links" onclick="opentabInner(event,'exp-backend')">Backend Intern</p>
+                                <p class="inner-tab-links" onclick="opentabInner(event,'exp-fullstack')">Full Stack Intern</p>
+                            </div>
+
+                            <div class="inner-tab-contents active-inner-tab" id="exp-sde">
+                                <ul>
+                                    <li><span>Feb 2026 - Ongoing</span><br>Software Development Engineer-I at Pibit.AI</li>
+                                    <li>Developed workflow lifecycle APIs and multi-source event dispatch (CDC, webhooks, S3, scheduler), enabling automated execution of 150+ insurance workflows on AWS Lambda.</li>
+                                    <li>Engineered an S3-backed event offload mechanism to bypass SQS payload limits and enhanced the visual workflow builder with multi-tenant support and debugging tools, scaling to 200+ workflows across 5 client tenants.</li>
+                                </ul>
+                            </div>
+
+                            <div class="inner-tab-contents" id="exp-backend">
+                                <ul>
+                                    <li><span>Aug 2025 - Feb 2026</span><br>Backend Engineer Internship at Pibit.AI</li>
+                                    <li>Built a scalable scraping orchestration platform supporting 200+ scrapers, enabling rapid onboarding of new data sources through configuration-based mappings and reducing manual maintenance efforts.</li>
+                                    <li>Engineered anti-bot bypass and observability systems using proxies, browser automation, CAPTCHA solving, and monitoring dashboards, achieving 99% scraping success rates across high-volume data pipelines.</li>
+                                </ul>
+                            </div>
+
+                            <div class="inner-tab-contents" id="exp-fullstack">
+                                <ul>
+                                    <li><span>May 2024 - July 2024</span><br>Full Stack Developer Internship at Student Web Committee, IITG</li>
+                                    <li>Maintained and enhanced institute web portals (Election & HAB Portal), resolving 15+ production issues and improving platform reliability for students and administrators.</li>
+                                    <li>Improved backend performance by optimizing application logic and database queries, reducing response times by 25% across key institute web platforms.</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                     <div class="tab-contents" id="education">
                         <ul>
@@ -91,7 +116,7 @@
                     <div class="service-box">
                         <i class="fa fa-anchor" style="font-size:40px"></i>
                         <h3>Saas EdTech Platform</h3>
-                        <p>Built an AI-driven EdTech SaaS platform using Next.js and Vapi.ai, enabling voice-based learning with customizable companions, secure auth, billing, and real-time interaction tracking.</p>
+                        <p>Built an AI-driven EdTech SaaS platform using Next.js, enabling voice-based learning with customizable companions, secure auth and real-time error tracking.</p>
                         <a href="https://saa-s-app-nine.vercel.app/" target="_blank">LEARN MORE</a>
                     </div>
                 </div>
@@ -162,6 +187,16 @@
             }
             event.currentTarget.classList.add("active-link");
             document.getElementById(tabname).classList.add("active-tab");
+         }
+
+         function opentabInner(evt, tabname){
+            var parent = evt.currentTarget.closest('.inner-tabs');
+            var links = parent.querySelectorAll('.inner-tab-links');
+            var contents = parent.querySelectorAll('.inner-tab-contents');
+            links.forEach(function(l){ l.classList.remove('active-inner'); });
+            contents.forEach(function(c){ c.classList.remove('active-inner-tab'); });
+            evt.currentTarget.classList.add('active-inner');
+            document.getElementById(tabname).classList.add('active-inner-tab');
          }
     </script>
 </body>

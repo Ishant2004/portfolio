@@ -153,6 +153,49 @@ nav ul li a:hover::after{
     display: block;
 }
 
+/* Inner tabs inside Experience */
+.inner-tabs{
+    background: #121212;
+    padding: 1rem;
+    border-radius: 8px;
+}
+.inner-tab-titles{
+    display:flex;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+.inner-tab-links{
+    cursor: pointer;
+    color: #ababab;
+    font-weight: 600;
+    position: relative;
+}
+.inner-tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    top: 22px;
+    transition: 0.25s;
+}
+.inner-tab-links:hover::after{ width: 100%; }
+.active-inner::after{ width: 50%; }
+.inner-tab-contents{
+    display: none;
+    color: #d0d0d0;
+    max-height: 260px;
+    overflow: auto;
+    padding-right: 8px;
+}
+.active-inner-tab{ display: block; }
+
+/* Slightly nicer scrollbar for inner content */
+.inner-tab-contents::-webkit-scrollbar{ width: 8px; }
+.inner-tab-contents::-webkit-scrollbar-thumb{ background: #333; border-radius: 8px; }
+.inner-tab-contents::-webkit-scrollbar-track{ background: #0b0b0b; }
+
 /* --------Services------ */
 .services{
     padding: 50px 0;
